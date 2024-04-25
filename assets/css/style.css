@@ -1,0 +1,105 @@
+/* Globales */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: cornsilk;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 10vh 1fr 5vh;
+    grid-template-areas:
+        'header header'
+        'menu main'
+        'footer footer';
+    height: 100vh;
+}
+
+span {
+    color: grey;
+}
+
+a {
+    color: black;
+    margin: 0.6rem;
+    text-decoration: none;
+}
+
+/* Grid Areas */
+header {
+    align-items: center;
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+}
+
+menu {
+    grid-area: menu;
+}
+
+main {
+    display: grid;
+    gap: 3rem;
+    grid-area: main;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-items: center;
+    margin: 1rem 0 1rem 0;
+    overflow-y: scroll;
+}
+
+footer {
+    align-items: center;
+    background-color: steelblue;
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+}
+
+/* Menu de navegaiom */
+.navegacion {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.item:hover {
+    color: darkgray;
+}
+
+
+/* Tarjeta */
+.card {
+    align-items: center;
+    border: solid 1.5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 4px 0px 12px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 0px 12px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 0px 12px -1px rgba(0, 0, 0, 0.75);
+}
+
+.producto p,
+.producto h3 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.buy {
+    align-items: center;
+    background-color: steelblue;
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+}
+
+.buy:hover {
+    background-color: yellow;
+}
